@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descomplicando o HTML Semântico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<main class="container">
+        <header>
+            <h1>Descomplicando o HTML Semântico</h1>
+            <h2>Entenda o Que É e Por Que Usar</h2>
+            <nav>
+            
+        <ul>
+            <li>
+                <a class="tag"href="#por-que-usar-html-semantico">Por Que Usar HTML Semântico?</a>
+            </li>
+            <li>
+                <a class="tag"href="#principais-tags-semanticas">Principais Tags Semânticas e Quando Usá-las</a>
+            </li>
+            <li>
+                <a class="tag"href="#evitando-o-anti-padrao">Evitando o Anti-Padrão: A &lt;div&gt; Genérica</a>
+            </li>
+                <li>
+                    <a class="tag"href="#conclusao">Conclusão</a>
+            </li>
+        </ul>
+                
+            </nav>
+        </header>
+    <article>
+        <section id="html-semantico">
+            <h3>Você já deve ter ouvido falar em HTML semântico, mas o que isso realmente significa e por que é tão importante?</h3>
+            <p>
+                Em poucas palavras, HTML semântico é sobre usar as tags HTML de acordo com o significado que elas representam, e não apenas pela sua aparência visual. É como dar um nome e um propósito para cada parte do seu conteúdo, tornando-o mais compreensível tanto para navegadores quanto para motores de busca e, claro, para outros desenvolvedores que possam trabalhar no seu código no futuro.
+            </p>
+        </section>
+        
+        <section id="por-que-usar-html-semantico">
+            <h3>Por Que Usar HTML Semântico?</h3>
+            <h4>O uso do HTML semântico traz uma série de benefícios:</h4>
+            
+            <ul>
+                
+                <li><span class="strong">Acessibilidade:</span>Leitores de tela para pessoas com deficiência visual conseguem interpretar a estrutura da página de forma mais precisa, proporcionando uma melhor experiência.</li>
+                
+                <li><span class="strong">SEO (Otimização para Motores de Busca):</span> Motores de busca como o Google entendem melhor o conteúdo da sua página quando ele está bem estruturado semânticamente, o que pode melhorar seu ranqueamento.</li>
+                
+                <li><span class="strong">Manutenibilidade e Legibilidade:</span> O código se torna mais organizado e fácil de entender, o que facilita a manutenção e o trabalho em equipe.</li>
+                
+                <li><span class="strong">Reusabilidade:</span> Componentes bem definidos semanticamente são mais fáceis de reutilizar em diferentes partes do seu site.</li>
+            </ul>
+        </section>
+        
+        <section id="principais-tags-semanticas">
+            <h3>Principais Tags Semânticas e Quando Usá-las</h3>
+            <h4>Vamos conhecer algumas das tags semânticas mais importantes e entender quando aplicá-las:</h4>
+            
+            <p><strong class="tag">&lt;header&gt;</strong></p>
+            <p>A tag <span class="text-tag">&lt;header&gt;</span> representa o cabeçalho de uma seção ou de um documento. Geralmente contém elementos como o logo do site, o título principal, navegação (menus) e, às vezes, um campo de busca.</p>
+            <h5>Exemplo</h5>
+            <pre class="box"><code>
+            &lt;header&gt;
+                &lt;img src="logo.png" alt="Logotipo da Empresa"&gt;
+                &lt;h1&gt;Meu Site Incrível&lt;/h1&gt;
+                &lt;nav&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+            &lt;/header&gt;
+            </code></pre>
+            
+            <p><strong class="tag">&lt;nav&gt;</strong></p>
+            <p>A tag <span class="text-tag">&lt;nav&gt;</span> é usada para agrupar links de navegação principais do seu site. Pense em menus de navegação, links para outras seções do site, etc.</p>
+            <h5>Exemplo</h5>
+            <pre class="box"><code>
+            &lt;nav&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="/produtos"&gt;Nossos Produtos&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="/servicos"&gt;Nossos Serviços&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="/blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+            </code></pre>
+            
+            <p><strong class="tag">&lt;main&gt;</strong></p>
+            <p>A tag <span class="text-tag">&lt;main&gt;</span> define o conteúdo principal e único do documento. Deve haver apenas uma tag <span class="text-tag">&lt;main&gt;</span> por página, e ela não deve conter conteúdo que se repita em outras partes do site (como cabeçalhos, rodapés ou barras laterais).</p>
+            <h5>Exemplo</h5>
+            <pre class="box"><code>
+            &lt;main&gt;
+                &lt;article&gt;
+                    &lt;h2&gt;Título do Artigo Principal&lt;/h2&gt;
+                    &lt;p&gt;Este é o conteúdo principal e único da minha página.&lt;/p&gt;
+                &lt;/article&gt;
+            &lt;/main&gt;
+            </code></pre>
+            
+            <p><strong class="tag">&lt;article&gt;</strong></p>
+            <p>A tag <span class="text-tag">&lt;article&gt;</span> representa um conteúdo independente e auto-contido, que faria sentido ser distribuído ou reutilizado independentemente do resto da página. Pense em posts de blog, artigos de notícias, comentários de usuários, etc.</p>
+            <h5>Exemplo</h5>
+            <pre class="box"><code>
+            &lt;article&gt;
+                &lt;h3&gt;Como Plantar Tomates&lt;/h3&gt;
+                &lt;p&gt;Descubra os segredos para cultivar tomates orgânicos em seu jardim.&lt;/p&gt;
+                &lt;footer&gt;
+                    &lt;p&gt;Publicado por João Silva em 01/07/2025&lt;/p&gt;
+                &lt;/footer&gt;
+            &lt;/article&gt;
+            </code></pre>
+            
+            <p><strong class="tag">&lt;section&gt;</strong></p>
+            <p>A tag <span class="text-tag">&lt;section&gt;</span> é usada para agrupar conteúdo tematicamente relacionado. É uma seção genérica de um documento, geralmente com um cabeçalho. Não deve ser usada apenas para estilização, mas sim para estruturar o conteúdo.</p>
+            <h5>Exemplo</h5>
+            <pre class="box"><code>
+            &lt;section&gt;
+                &lt;h2&gt;Sobre Nós&lt;/h2&gt;
+                &lt;p&gt;Somos uma empresa dedicada a oferecer as melhores soluções para você.&lt;/p&gt;
+            &lt;/section&gt;
+
+            &lt;section&gt;
+                &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Desenvolvimento Web&lt;/li&gt;
+                    &lt;li&gt;Design Gráfico&lt;/li&gt;
+                    &lt;li&gt;Consultoria SEO&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/section&gt;
+            </code></pre>
+
+            <p><strong class="tag">&lt;aside&gt;</strong></p>
+            <p>A tag <span class="text-tag">&lt;aside&gt;</span> representa conteúdo relacionado ao conteúdo principal, mas que pode ser considerado separado ou secundário. Geralmente é usado para barras laterais, blocos de citação, anúncios, etc.</p>
+            <h5>Exemplo</h5>
+            <pre class="box"><code>
+            &lt;aside&gt;
+                &lt;h3&gt;Leia Também:&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="/artigo-relacionado-1"&gt;Dicas de Jardinagem&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="/artigo-relacionado-2"&gt;Benefícios da Horta Orgânica&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/aside&gt;
+            </code></pre>
+            
+            <p><strong class="tag">&lt;footer&gt;</strong></p>
+            <p>A tag <span class="text-tag">&lt;footer&gt;</span> representa o rodapé de uma seção ou do documento. Normalmente contém informações como direitos autorais, links para políticas de privacidade, informações de contato, etc.</p>
+            <h5>Exemplo</h5>
+            <pre class="box"><code>
+            &lt;footer&gt;
+                &lt;p&gt;&amp;copy; 2025 Minha Empresa. Todos os direitos reservados.&lt;/p&gt;
+                &lt;a href="/politica-privacidade"&gt;Política de Privacidade&lt;/a&gt;
+            &lt;/footer&gt;
+            </code></pre>
+
+        </section>
+        
+        <section id="evitando-o-anti-padrao">
+            <h3>Evitando o Anti-Padrão: A <span class="tag">&lt;div&gt;</span> Genérica</h3>
+            Antes do HTML5, a tag <span class="text-tag">&lt;div&gt;</span> era amplamente utilizada para estruturar o layout das páginas. No entanto, a <span class="text-tag">&lt;div&gt;</span> é uma tag não semântica, ou seja, ela não transmite nenhum significado sobre o conteúdo que envolve.
+            
+            <p>Embora a <span class="text-tag">&lt;div&gt;</span> ainda tenha seu lugar (principalmente para fins de estilização e organização que não se encaixam em tags semânticas específicas), o ideal é priorizar as tags semânticas sempre que possível.</p>
+            
+            <p>Erro Comum (Anti-Padrão):</p>
+                <pre class="box"><code>
+                &lt;div class="header"&gt;
+                    &lt;div class="logo"&gt;...&lt;/div&gt;
+                    &lt;div class="menu"&gt;...&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="content"&gt;
+                    &lt;div class="article"&gt;...&lt;/div&gt;
+                    &lt;div class="sidebar"&gt;...&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="footer"&gt;...&lt;/div&gt;
+                </code></pre>
+            
+            <p>Forma Correta (Semântica):</p>
+
+                <pre class="box"><code>
+                &lt;header&gt;
+                    &lt;img src="logo.png" alt="Logotipo"&gt;
+                    &lt;nav&gt;...&lt;/nav&gt;
+                &lt;/header&gt;
+                &lt;main&gt;
+                    &lt;article&gt;...&lt;/article&gt;
+                    &lt;aside&gt;...&lt;/aside&gt;
+                &lt;/main&gt;
+                &lt;footer&gt;...&lt;/footer&gt;
+                </code></pre>
+</p>
+        </section>
+        
+        <section id="conclusao">
+            <h3>Conclusão</h3>
+            <p>
+                Adotar o HTML semântico não é apenas uma boa prática, é essencial para criar páginas web robustas, acessíveis e otimizadas. Ao dar significado ao seu código, você não apenas melhora a experiência do usuário, mas também facilita o trabalho de outros desenvolvedores e contribui para uma web mais organizada e eficiente. Comece a aplicar essas tags em seus projetos e observe a diferença!
+            </p>
+        </section>
+    </article>
+</main>
+    <footer>
+        Artigo escrito e publicado por Danyl Kendrick
+    </footer>
+</body>
+</html>

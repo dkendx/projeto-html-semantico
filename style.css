@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+/* ============================ */
+/* IMPORTS DE FONTES */
+/* ============================ */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+/* ============================ */
+/* ESTILOS GLOBAIS / RESET BÁSICO */
+/* ============================ */
+html {
+    scroll-behavior: smooth; /* Rolagem suave para âncoras */
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #0098FF; /* Cor de fundo principal */
+    margin: 0; /* Remover margem padrão do body */
+    padding: 0; /* Remover padding padrão do body */
+    line-height: 1.6; /* Melhorar legibilidade do texto */
+    color: #333; /* Cor de texto padrão */
+}
+
+/* Reset básico para listas */
+ul {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding-left: 0; /* Remove o padding padrão esquerdo da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+}
+
+/* ============================ */
+/* TIPOGRAFIA */
+/* ============================ */
+h1, h2, h3, h4, h5 {
+    color: #007acc; /* Cor primária para todos os títulos */
+    text-align: center; /* Centraliza todos os títulos */
+    margin-top: 20px; /* Margem superior para títulos */
+    margin-bottom: 15px; /* Espaçamento abaixo dos títulos */
+}
+
+h1 {
+    font-size: 2.5em; /* Tamanho maior para o título principal */
+    font-weight: bolder; /* Deixa o h1 mais pesado */
+}
+
+h2 {
+    font-size: 2em; /* Tamanho para subtítulos */
+}
+
+h3 {
+    font-size: 1.75em; /* Tamanho para seções */
+}
+
+h4 {
+    font-size: 1.5em; /* Tamanho para subseções */
+}
+
+h5 {
+    font-size: 1.25em; /* Tamanho para exemplos (opcional, se usar) */
+}
+
+
+/* ============================ */
+/* LAYOUT E CONTAINER PRINCIPAL */
+/* ============================ */
+.container {
+    max-width: 900px; /* Largura máxima do conteúdo */
+    margin: 40px auto; /* Centraliza na tela com margem superior/inferior */
+    background: #fff; /* Cor de fundo da caixa */
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 4px 24px #004D80; /* Sombra suave */
+    padding: 32px; /* Espaço interno */
+}
+
+/* ============================ */
+/* NAVEGAÇÃO (NAV) */
+/* ============================ */
+header > nav {
+    text-align: center; /* Centraliza os itens de navegação */
+    padding: 10px;
+    border-radius: 10px; /* Arredonda bordas da área de navegação */
+    margin-bottom: 20px; /* Espaçamento abaixo da navegação */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    /* list-style: none; - Esta propriedade é para a tag ul/ol, não para a */
+    color: inherit; /* Herda a cor do texto padrão ou de .tag */
+    display: block; /* Para que o padding e a margem funcionem em cada item */
+    padding: 5px 0; /* Adiciona padding vertical aos links */
+}
+
+/* ============================ */
+/* ESTILOS DE COMPONENTES / CLASSES ESPECÍFICAS */
+/* ============================ */
+
+/* Estilo para links de tags na navegação */
+.tag {
+    display: inline-block; /* Permite aplicar padding e margem horizontal */
+    font-weight: bold;
+    color: #007acc; /* Cor do texto da tag */
+    background: #e6f2fa; /* Fundo claro da tag */
+    border: 2px solid #007acc; /* Borda da tag */
+    border-radius: 10px;
+    padding: 6px 14px;
+    margin: 4px 6px; /* Ajustei a margem para separar melhor os botões */
+    transition: background 0.2s, color 0.2s; /* Transição suave para hover */
+    cursor: pointer;
+}
+
+.tag:hover {
+    background: #007acc; /* Fundo no hover */
+    color: #fff; /* Texto no hover */
+}
+
+/* Estilo para tags de texto embutidas (ex: <span class="text-tag">&lt;div&gt;</span>) */
+.text-tag {
+    display: inline; /* Garantir que fique na mesma linha do texto */
+    font-weight: 500;
+    color: #1565c0; /* Cor do texto da tag de exemplo */
+    background: #e3f2fd; /* Fundo claro da tag de exemplo */
+    border: 1px solid #bbdefb; /* Borda da tag de exemplo */
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 0 2px;
+    font-size: 1em; /* Tamanho da fonte igual ao texto ao redor */
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Estilo para texto com ênfase forte (ex: <span class="strong">Texto</span>) */
+.strong {
+    font-weight: bold;
+    color: #007acc; /* Cor para texto em destaque */
+    /* display: inline-block; - geralmente não é necessário para strong, 'inline' é o padrão */
+}
+
+/* Estilo para caixas de código e exemplos */
+.box {
+    background: #e0f2f7; /* Um tom de azul claro para o fundo da caixa de código, combinando com o tema */
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    overflow-x: auto; /* Adicionado para lidar com código longo em telas pequenas */
+    border: 1px solid #bbdefb; /* Adiciona uma borda sutil */
+}
+
+/* Estilo específico para o código dentro das caixas */
+.box code {
+    font-family: 'Fira Code', monospace; /* Garante a fonte monoespaçada */
+    font-size: 0.9em; /* Levemente menor para código */
+    color: #3f51b5; /* Cor para o código dentro da caixa */
+    white-space: pre-wrap; /* Garante que o texto quebre linhas se for muito longo */
+}
+
+/* ============================ */
+/* RODAPÉ (FOOTER) */
+/* ============================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #f0f0f0; /* Cor do texto para o rodapé */
+    background-color: #004D80; /* Cor de fundo para o rodapé */
+    font-size: 0.9em;
+    border-top: 1px solid #007acc;
+}
